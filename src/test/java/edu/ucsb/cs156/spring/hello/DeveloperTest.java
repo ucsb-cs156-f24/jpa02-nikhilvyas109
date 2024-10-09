@@ -15,7 +15,6 @@ public class DeveloperTest {
         // this hack is from https://www.timomeinen.de/2013/10/test-for-private-constructor-to-get-full-code-coverage/
         Constructor<Developer> constructor = Developer.class.getDeclaredConstructor();
         assertTrue(Modifier.isPrivate(constructor.getModifiers()),"Constructor is not private");
-
         constructor.setAccessible(true);
         constructor.newInstance();
     }
